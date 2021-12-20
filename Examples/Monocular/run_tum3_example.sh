@@ -1,0 +1,1 @@
+./mono_tum ../../Vocabulary/ORBvoc.txt ./TUM3.yaml /mnt/d/projects/slam_matlab/tum_rgbd_dataset/rgbd_dataset_freiburg3_long_office_household
