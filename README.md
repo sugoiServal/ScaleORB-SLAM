@@ -2,14 +2,18 @@
 ## test platform
 
   Ubuntu 20.04 (WSL)
+
   Eigen 3.2.9
+
   CUDA 11.4
+
   OpenCV 4.5.3
+  
   C++ 11
 
 ## Execution
 
-**application** 
+**Application** 
 
 modify 
 ```
@@ -23,6 +27,7 @@ to play with the application and I/O
 
 
 **Script**
+
 use 
 ```
 /debug/run_all_unix.sh
@@ -31,6 +36,7 @@ to execute the applications with your own dataset
 
 
 **Experiment Scripts** 
+
 of the projects are provided in 
 ```
 ./ObjectSLAM
