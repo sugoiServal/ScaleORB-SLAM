@@ -19,6 +19,10 @@ scale-induced error in Monocular SLAM.
 - OpenCV 4.5.3
 - C++ 11
 
+# Watch the Demo
+
+
+[![Watch the video](https://imgur.com/rS8Drlm.jpg)](https://youtu.be/c_3gBXLABsc)
 # Usage
 
 
