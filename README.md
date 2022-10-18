@@ -1,46 +1,37 @@
-# Scale ORB-SLAM
-## test platform
-
-  Ubuntu 20.04 (WSL)
-
-  Eigen 3.2.9
-
-  CUDA 11.4
-
-  OpenCV 4.5.3
-  
-  C++ 11
-
-## Execution
-
-**Application** 
-
-modify 
-```
-./debug/mono_tum.cc
-```
-or
-``` 
-./rgbd_tum.cc
-```
-to play with the application and I/O
+# Solving scale ambiguity in Monocular ORB-SLAM with object detection based landmark
 
 
-**Script**
+# Abstract
+In a visual SLAM system, the Monocular scale is inherently not able to be extracted correctly. We propose an algorithm that solves scale ambiguity in Monocular SLAM
+system by estimating scale correction factor from semantic object recognition. The goal of scale correction is to
+find an upscale/downscale factor that corrects the Monocular trajectory or map into the real scale. In our approach,
+MapPoints are assigned semantically to objects detected by
+a Mask R-CNN detector. Then scale representation to each
+object is calculated. We construct a scale library from RGBD/ Stereo camera SLAM and then query the scale information to calculate the correction factor in Monocular SLAM.
+We implemented the system in ORB SLAM framework and
+demonstrate that the system is generally capable to reduce
+scale-induced error in Monocular SLAM. 
 
-use 
-```
-/debug/run_all_unix.sh
-```
-to execute the applications with your own dataset
+# Test Platform
+- Ubuntu 20.04 (WSL)
+- Eigen 3.2.9
+- CUDA 11.4
+- OpenCV 4.5.3
+- C++ 11
+
+# Usage
 
 
-**Experiment Scripts** 
+- modify `./debug/mono_tum.cc` or `./rgbd_tum.cc` to play with the application and I/O.
 
-of the projects are provided in 
-```
-./ObjectSLAM
-```
+- core system inside `./src`
+
+- use the script `/debug/run_all_unix.sh` to execute the applications with your own dataset.
+
+- Experimental Scripts of the project are provided in `./ObjectSLAM`.
+
+- Mask-RCNN parameters are located in `./ObjectSLAM/model`.
+
 
 
 
